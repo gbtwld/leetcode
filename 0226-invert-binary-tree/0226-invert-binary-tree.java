@@ -15,7 +15,6 @@
  */
 class Solution {
     public void invert(TreeNode newNode, TreeNode oldNode) {
-        if (oldNode.left == null && oldNode.right == null) return;
         if (oldNode.right != null) {
             newNode.left = new TreeNode(oldNode.right.val);
             invert(newNode.left, oldNode.right);
