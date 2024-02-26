@@ -11,6 +11,8 @@ class Solution {
 
             if (!(nx >= 0 && ny >= 0 && nx < board.length && ny < board[0].length) || visited[nx][ny] || board[nx][ny] == 'X') continue;
 
+            if (dp[nx][ny]) continue;
+
             dfs(board, nx, ny, visited, dp);
         }
     }
