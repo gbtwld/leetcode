@@ -31,9 +31,9 @@ class Solution {
             }
         }
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (!dp[i][j] && board[i][j] == 'O') {
+        for (int i = 1; i < m - 1; i++) {
+            for (int j = 1; j < n - 1; j++) {
+                if (!dp[i][j]) {
                     board[i][j] = 'X';
                 }
             }
